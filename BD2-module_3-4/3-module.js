@@ -1,69 +1,100 @@
 // =====================================================================
-///                       MODULE-2: МАСИВИ та ФУНКЦІЇ
+//
+///                          MODULE-3: OBJECT
+//
 // =====================================================================
 
-// 1. Реалізуйте Result
-// const a = ['a', 'b', 'c'];
-// const b = [1, [2, 3]];
-// const c = 0;
-// Result = ['a', 'b', 'c', 0, 1, 2, 3];
+//                                PART-1
 
-// =====================================================
+// Создание обьекта
+// const obj = {};
+// console.log(obj);
 
-// 2. Реалізуйте Result
-// const a = ["a", "b", "c", "d", "e", "f", "g", "h"];
-// Result = ["a", "b", "c", "a", "b", "c", "g", "h"];
+// const obj2 = new Object();
+// console.log(obj2);
 
-// =====================================================
+// const obj3 = Object.create({});
+// console.log(obj3);
 
-// 3. Реалізуйте функцію, яка розгладить масив:
-// const arr = [1, 2, [3, 4], [5, 6], 7];
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// Копирование обьекта
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = obj;
+// obj2.name = "James Bond";
 
-// Result = [1, 2, 3, 4, 5, 6, 7];
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
 
-// =====================================================
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = {};
 
-// 4. Напиши функцію, яка повертає останній символ стрічки
-
-// function getLastCharacter(input) {
-//   return input[input.length - 1];
+// for (let key in obj) {
+//   obj2[key] = obj[key];
 // }
 
-// console.log(getLastCharacter("321433530")); // 0
+// obj2.name = "James Bond";
 
-// =====================================================
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
 
-// 5. Реалізуй функцію, яка приймає рядки або числа і повертає масив з протилежним типом даних:
-// convert('1', 2, 3, '4') || [1, '2', '3', 4]
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = { ...obj, name: "James Bond" };
 
-// =====================================================
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
 
-// 6. Напиши функцію, яка приймає рядок text, та повертає масив усіх великих літер, які є в text в такому ж порядку.
-// Приклад:
-// getCapitals('Ukraine Everywhere') // ['U', 'E']
-// getCapitals('UkraiNe EveRywherE') // ['U', 'N', 'E', 'R', 'E']
-// getCapitals("1234M5678A9") // ['M', 'A']
+// const obj = { name: "Andrew", age: 29, favoriteBrands: ["Nissan", "Apple", "Sony"] };
+// const obj2 = JSON.parse(JSON.stringify(obj));
+// obj2.name = "James Bond";
 
-// function getCapitals(string) {
-//   // write code here
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
 
-//   const arr = [];
+// const obj = { name: "Andrew", age: 29 };
+// const obj3 = {name: '123'}
 
-//   Array.from(string.trim()).forEach((letter) => {
-//     if (letter === letter.toUpperCase()) {
-//       if (isNaN(letter)) {
-//         arr.push(letter);
-//       }
-//     }
-//   });
+// const obj2 = Object.assign(obj3, obj);
 
-//   console.log(arr);
-//   return arr;
-// }
+// console.log(obj); // ?
+// console.log(obj3); // ?
 
-// =====================================================
-//                ДОДАТКОВО
-// =====================================================
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+// Проверка свойств Обьекта
+const person = {
+  name: "",
+  age: 29,
+  hobbies: null,
+};
+
+// console.log("name" in person);
+
+// person.hobbies = null;
+
+// console.log("name" in person);
+// console.log(person);
+
+// console.log(person.hasOwnProperty("name") && !!person.name);
+
+// ------
+// console.log("toString" in person);
+// console.log(person.__proto__.toString);
+// console.log(person);
+
+// const obj = Object.create(null);
+// obj.name = "Andrew";
+// obj.age = 29;
+
+// console.log("toString" in obj);
+// console.log(obj);
+
+// =====================================================================
+//
+//                                PART - 2
+//
+// =====================================================================
 
 // 1. Напиши скрипт, який для обєкта user, послідовно:
 // - добавить поле mood зі значеням 'happy'.
