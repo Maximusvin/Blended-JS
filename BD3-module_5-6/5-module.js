@@ -168,27 +168,27 @@ console.log(storage.removeItem("apple"));
 
 //++++++++++++++++++++++++++++++++++++++++++
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
-  }
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
 
-  get getClientData() {
-    return {
-      login: this.#login,
-      email: this.#email,
-    };
-  }
+//   get getClientData() {
+//     return {
+//       login: this.#login,
+//       email: this.#email,
+//     };
+//   }
 
-  set changeEmail(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   set changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const client = new Client("mango", "mango@gmail.com");
-client.changeEmail = '"mango@gmail.com"';
+// const client = new Client("mango", "mango@gmail.com");
+// client.changeEmail = '"mango@gmail.com"';
 // console.log(client.getClientData.email);

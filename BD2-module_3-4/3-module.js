@@ -179,4 +179,21 @@ const person = {
 //   },
 //   mult() {},
 // };
-//=======================
+
+// ==================================================================================
+
+// // 5. Об'єднати два обєкти між собою:
+//
+// const users = [
+//   { name: "Victor", score: 20 },
+//   { name: "Mario", score: 10 },
+//   { name: "Tatiana", score: 30 },
+// ];
+
+// const moreUsers = [
+//   { name: "Laura", score: 50 },
+//   { name: "Jasmine", score: 70 },
+//   { name: "Peter", score: 60 },
+// ];
+
+// console.log(allUsers); // [{name: "Victor", score: 20}, {name: "Mario", score: 10}, {name: "Tatiana", score: 30}, {name: "Laura", score: 50}, {name: "Jasmine", score: 70}, {name: "Peter", score: 60}]

@@ -22,21 +22,13 @@
 
 // //----------------------------------------------------------------
 
-// // 3. Об'єднати два обєкти між собою:
-//
-// const users = [
-//   { name: "Victor", score: 20 },
-//   { name: "Mario", score: 10 },
-//   { name: "Tatiana", score: 30 },
-// ];
+// // 3. Напиши ф-цію positiveSum, яка приймає масив чисел та повертає їх суму.
+// // Але рахуватись мають лише позитивні числа!!!
 
-// const moreUsers = [
-//   { name: "Laura", score: 50 },
-//   { name: "Jasmine", score: 70 },
-//   { name: "Peter", score: 60 },
-// ];
+// const positiveSum = (arr) => {};
 
-// console.log(allUsers); // [{name: "Victor", score: 20}, {name: "Mario", score: 10}, {name: "Tatiana", score: 30}, {name: "Laura", score: 50}, {name: "Jasmine", score: 70}, {name: "Peter", score: 60}]
+// positiveSum([2, 4, 6, 8]); // 20
+// positiveSum([0, -3, 5, 7]); // 12
 
 // //----------------------------------------------------------------
 
@@ -136,19 +128,19 @@
 // makeDish("Poly", "muffins");
 //++++++++++++++++++++++++++++++++++++++++++
 
-const makeShef = function (name) {
-  return function makeDish(dish) {
-    console.log(`${name} is cooking ${dish}`);
-  };
-};
+// const makeShef = function (name) {
+//   return function makeDish(dish) {
+//     console.log(`${name} is cooking ${dish}`);
+//   };
+// };
 
-const mango = makeShef("Mango");
-mango("apple pie"); // Mango is cooking apple pie
-// mango("beef stew"); // Mango is cooking beef stew
+// const mango = makeShef("Mango");
+// mango("apple pie"); // Mango is cooking apple pie
+// // mango("beef stew"); // Mango is cooking beef stew
 
-const poly = makeShef("Poly");
-poly("pancakes"); // Poly is cooking pancakes
-// poly("eggs and bacon"); // Poly is cooking eggs and bacon
+// const poly = makeShef("Poly");
+// poly("pancakes"); // Poly is cooking pancakes
+// // poly("eggs and bacon"); // Poly is cooking eggs and bacon
 
 // //------------------------------------------------------------------------------------
 
@@ -162,16 +154,16 @@ poly("pancakes"); // Poly is cooking pancakes
 // function each(array, callback) { };
 
 //++++++++++++++++++++++++++++++++++++++++++
-function each(array, callback) {
-  const newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    newArray.push(callback(array[i]));
-  }
-  return newArray;
-}
+// function each(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(callback(array[i]));
+//   }
+//   return newArray;
+// }
 
-const array = [3, 5, 6, 34, 8, 83, 12, 34];
-console.log(each(array, (value) => value * 2));
+// const array = [3, 5, 6, 34, 8, 83, 12, 34];
+// console.log(each(array, (value) => value * 2));
 
 // //------------------------------------------------------------------------------------
 
@@ -185,15 +177,15 @@ console.log(each(array, (value) => value * 2));
 // console.log(counter());
 
 //++++++++++++++++++++++++++++++++++++++++++
-function makeCounter() {
-  let counter = 0;
-  return () => (counter += 1);
-}
+// function makeCounter() {
+//   let counter = 0;
+//   return () => (counter += 1);
+// }
 
-const counter = makeCounter();
-console.log(counter());
-console.log(counter());
-console.log(counter());
+// const counter = makeCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
 
 // //------------------------------------------------------------------------------------
 
@@ -206,9 +198,26 @@ console.log(counter());
 // console.log(foo("qwerty")); // true or false
 
 //++++++++++++++++++++++++++++++++++++++++++
-const savePassword = (password) => (ourPassword) => password === ourPassword;
-const standartPassword = savePassword("qwerty");
+// const savePassword = (password) => (ourPassword) => password === ourPassword;
+// const standartPassword = savePassword("qwerty");
 
-console.log(standartPassword("qwerty"));
+// console.log(standartPassword("qwerty"));
 
 // console.log(savePassword("wuerty")("wueerty"));
+
+// // =====================================================================================
+
+// // 13. Напиши ф-цію letterCount, яка приймає два аргументи: слово та літеру
+//  // і рахує скільки разів дана літера зустрічається у слові.
+// // Якщо перший аргумент пуста строка - повератє 0ю
+
+// const letterCount = (word, letter) => {};
+
+// letterCount("Maggy", "g"); // => 2;
+// letterCount("Barry", "b"); // => 1;
+// letterCount("", "v"); // => 0;
+
+// // =====================================================================================
+
+// // 14.
+//  //
