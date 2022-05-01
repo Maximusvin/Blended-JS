@@ -11,6 +11,79 @@
 
     <h2>Home work 3</h2>
 
+    <h3>Condition</h3>
+
+    <ul>
+      <li>Створіть <b>клас Hamburger</b></li>
+      <li>
+        В Класі добавте в статік обєкт налаштувань, щоб була можливість
+        використовувати їх як у прикладі:
+        <b>Hamburger.stuffing.STUFFING_SALAD</b>
+      </li>
+      <li>
+        Добавте слідуючі методи:
+        <ul>
+          <li><b>addSize</b> - Добавляем размер бургера</li>
+          <li>
+            <b>addTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> - Добавить
+            добавку к гамбургеру. Можно добавить несколько добавок, при условии
+            что они валидные
+          </li>
+          <li>
+            <b>removeTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> -
+            Убрать добавку, при условии, что она ранее была добавлена.
+          </li>
+          <li>
+            <b>getStuffing</b> - геттер, должен вернуть this.toppings = [....]
+          </li>
+          <li><b>calculatePrice()</b> - узнать цену гамбургера</li>
+          <li><b>calculateCalories()</b> - Узнать калорийность гамбургера</li>
+          <li>
+            <b>showError()</b> - метод который показывает 2 ошибки - если размер
+            не верный передали, начинка не существует (При удалении или
+            добавлении)
+          </li>
+        </ul>
+      </li>
+      <li>
+        Добавте в логіку розрахунок варстості в залежності від розміру
+        гамбургера.
+      </li>
+      <li>
+        Дані в формі мають рендеритись динамічно (уявіть, що вони приходять з
+        бекенду)
+      </li>
+      <li>
+        Форма має бути інтерактивною, тобто - при виборі кожного пункту -
+        інформація добавляється в блок "Інфо". Після заповнення усіх полів -
+        сабмітимо форму і отримуємо підтвердження замовлення з виводом загальної
+        інформації: вартість замовлення та що було обрано
+      </li>
+    </ul>
+
+    <h3>Task</h3>
+
+    <form id="form">
+      <select name="size" id="size">
+        <option value="">Choose size your hamburger</option>
+        <option value="S">S</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+      </select>
+      <select name="toppings" id="toppings">
+        <option value="">Choose toppings</option>
+        <option value="STUFFING_SALAD">STUFFING_SALAD</option>
+        <option value="STUFFING_POTATO">STUFFING_POTATO</option>
+        <option value="TOPPING_MAYO">TOPPING_MAYO</option>
+        <option value="TOPPING_SPICE">TOPPING_SPICE</option>
+      </select>
+      <button type="submit">Замовити</button>
+    </form>
+
+    <h3>Info</h3>
+    <p class="info"></p>
+    <p class="order"></p>
+
     <script src="../../BD3-module_5-6/home-work_5-6.js"></script>
   </body>
 </html>

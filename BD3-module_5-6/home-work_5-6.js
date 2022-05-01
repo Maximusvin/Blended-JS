@@ -24,7 +24,7 @@ const stuffing = {
   },
 };
 
-// Доплата за размеры:
+// Вартість бургера в залежності від розміру:
 sizes = {
   S: 200,
   L: 300,
@@ -53,6 +53,10 @@ sizes = {
 //
 //
 //
+
+const formRef = document.querySelector("form");
+const infoRef = document.querySelector(".info");
+const orderRef = document.querySelector(".order");
 
 class Hamburger {
   constructor() {
@@ -111,18 +115,48 @@ class Hamburger {
   }
 }
 
-const burger = new Hamburger();
+formRef.addEventListener("submit", onSubmit);
+formRef.addEventListener("input", onFieldChanges);
 
-burger.addSize("S");
+const selectedData = {
+  size: null,
+  toppings: null,
+};
 
-burger.addTopping([
-  Hamburger.stuffing.STUFFING_POTATO.type,
-  Hamburger.stuffing.STUFFING_SALAD.type,
-]);
+function onFieldChanges(e) {
+  const { name, value } = e.target;
 
-burger.removeTopping(Hamburger.stuffing.STUFFING_POTATO.type);
+  if (!e.target) return;
 
-burger.calculatePrice();
-burger.getStuffing;
+  selectedData[name] = value;
 
-console.log("Your burger: ", burger);
+  infoRef.textContent = `Ви обрали розмір: ${selectedData.size} (вартість - ${
+    sizes[selectedData.size]
+  } грн) та добавку: ${selectedData.toppings} `;
+}
+
+function onSubmit(e) {
+  e.preventDefault();
+  const burger = new Hamburger();
+
+  burger.addSize("S");
+
+  burger.addTopping([
+    Hamburger.stuffing.STUFFING_POTATO.type,
+    Hamburger.stuffing.STUFFING_SALAD.type,
+  ]);
+
+  burger.removeTopping(Hamburger.stuffing.STUFFING_POTATO.type);
+
+  const totalPrice = burger.calculatePrice();
+  burger.getStuffing;
+
+  console.log("Your burger: ", burger);
+
+  markup(burger, totalPrice);
+}
+
+const markup = ({ size, toppings }, totalPrice) =>
+  (orderRef.innerHTML = `Ви замовили гамбургер розміру ${size} з добавкою(-ми) ${toppings}. Загальна вартість до оплати: ${totalPrice}грн `);
+
+onFieldChanges(formRef);
