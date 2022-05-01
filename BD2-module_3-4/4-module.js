@@ -12,6 +12,9 @@
 //   { id: 3, name: "Mary" },
 // ];
 
+// const foo = (id) => {};
+
+//++++++++++++++++++++++++++++++++++++++++++
 // const find = (id) => users.find((user) => user.id === id);
 // console.log(find(2)); // {id: 2, name: "Pete"}
 
