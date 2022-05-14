@@ -4,6 +4,18 @@
 //
 // =====================================================================
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 // // 1. Створи функцію, яка проводить пошук обєкта в масиві по id та виводить його в консоль.
 //
 // const users = [
@@ -43,8 +55,8 @@
 //   { name: "Tatiana", score: 30 },
 // ];
 
-// console.log(usersSortedByScoreDesc); // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
-// console.log(usersSortedByScoreAsc); // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
+// console.log(usersSortedByScoreDesc(users)); // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
+// console.log(usersSortedByScoreAsc(users)); // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
 
 // // //----------------------------------------------------------------
 

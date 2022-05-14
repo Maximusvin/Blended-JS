@@ -1,0 +1,224 @@
+body {
+  padding: 10px 80px;
+  font-size: 18px;
+}
+
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  padding-left: 40px;
+  margin: 10px;
+}
+
+ul > li {
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 0;
+}
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.order {
+  display: flex;
+  align-items: start;
+}
+
+#form {
+  margin-right: 25px;
+  width: 40%;
+}
+
+.info-wrap {
+  width: 100%;
+}
+
+.info {
+  position: relative;
+}
+
+.add-topping-wrap {
+  position: absolute;
+  top: 50px;
+}
+
+.total-value {
+  margin-top: 10px;
+}
+
+.input-wrap {
+  margin-bottom: 30px;
+}
+
+.btn-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form {
+  width: 500px;
+  position: relative;
+  background: #ddd;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2em 50px;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin-right: 50px;
+}
+
+.form:before,
+.form:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.form:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+input {
+  padding: 8px 15px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 5px;
+  outline: none;
+  box-shadow: inset 2px 2px rgba(154, 147, 140, 0.5),
+    1px 1px 5px rgba(255, 255, 255, 1);
+  display: block;
+}
+
+.menu-wrap {
+  width: 500px;
+  position: relative;
+  background: #ddd;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2em 50px;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+}
+
+.menu-wrap:before,
+.menu-wrap:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.menu-wrap:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.toppings {
+  margin-right: 100px;
+}
+
+.inp-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.btn-input {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.2s linear;
+  border: 1px solid rgb(173, 172, 172);
+  background-color: rgb(88, 233, 223);
+}
+
+.btn-input:hover {
+  background-color: aqua;
+}
+
+.btn-input:disabled {
+  background-color: rgb(213, 241, 240);
+}
+
+.btnAdd {
+  left: -17px;
+}
+
+.btnRemove {
+  right: -17px;
+}
+
+.btnOrder {
+  display: block;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid rgb(165, 165, 165);
+  margin-bottom: 5px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 100%;
+}
