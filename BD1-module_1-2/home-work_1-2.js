@@ -23,6 +23,35 @@ let userCredits;
 let userCountry;
 let maxPrice;
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 const filterCountries = () => {
   if (maxPrice < 600) {
     return countries
