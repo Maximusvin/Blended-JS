@@ -60,10 +60,12 @@ module.exports = {
   mode: 'development',
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, './dist'),
-    open: true,
+    static: {
+      directory: path.join(__dirname, 'dir'),
+    },
     compress: true,
-    hot: true,
-    port: 8080,
+    port: 9000,
+    open: true,
+    hot: false,
   },
 };

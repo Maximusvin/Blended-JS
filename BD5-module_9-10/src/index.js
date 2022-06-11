@@ -1,23 +1,30 @@
-import { refs } from './js/refs';
-import { createLi, addLiToList } from './js/generateMarkdown';
-import { storage } from './js/helpers/storage';
+import { Notify } from 'notiflix';
+import { refs } from './js/helpers/refs';
+import { APIService } from './js/services/APIservice';
+import { pokemonDetails } from './js/components/pokemonDetails';
+import './scss/main.scss';
 
-const handleMount = () => {
-  const list = storage.readItem('list', []);
-  const markdown = list.reduce((acc, text) => acc + createLi(text), '');
-  addLiToList(markdown);
-};
+const pokemonApi = new APIService();
 
-const handleSubmit = e => {
-  e.preventDefault();
-  const value = refs.input.value;
-  const liItem = createLi(value);
-  addLiToList(liItem);
-  const result = storage.readItem('list', []);
-  result.push(value);
-  storage.addItem('list', result);
-  refs.input.value = '';
-};
+function getAllPokemon({ results }) {
+  results.forEach(pokemon =>
+    pokemonApi.getPokemon(pokemon.name).then(pokemonMarkup),
+  );
+}
 
-refs.form.addEventListener('submit', handleSubmit);
-addEventListener('DOMContentLoaded', handleMount);
+function pokemonMarkup(pokemon) {
+  const data = `<li class="pokemon-card" data-pokemon=${pokemon.name}>    
+        <h2 data-pokemon=${pokemon.name}>${pokemon.name}</h2>
+        <img src=${pokemon.sprites.other.dream_world.front_default} data-pokemon=${pokemon.name} />  
+      </li>`;
+
+  refs.pokemonList.insertAdjacentHTML('beforeend', data);
+}
+
+pokemonApi.getAllPokemon().then(getAllPokemon);
+
+refs.pokemonList.addEventListener('click', openDetailsPokemon);
+
+function openDetailsPokemon(event) {
+  pokemonDetails(event.target.dataset.pokemon);
+}

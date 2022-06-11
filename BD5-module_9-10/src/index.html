@@ -4,17 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
   <body>
     <div id="root">
-      <form id="form">
-        <input type="text" />
-        <button type="submit">Create</button>
-      </form>
-      <ul class="list"></ul>
+      <header class="header">
+        <nav class="navigation" id="navigation">
+          <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="" />
+            <button
+              type="submit"
+              class="search-form__btn js-search-form__btn"
+            ></button>
+          </form>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h2 class="main-title">Pokemons</h2>
+          <ul class="pokemon__container"></ul>
+          <div class="pagination-wrapper"></div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <p class="copyright">2022</p>
+        </div>
+      </footer>
     </div>
+
+    <div id="modal"></div>
   </body>
 </html>
-

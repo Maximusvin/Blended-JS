@@ -22,6 +22,7 @@ const MovieDetailsCard = ({
   const genresMarkup = genres
     .map(({ name }) => `<li class="movie-modal__genres-item">${name}</li>`)
     .join(' ');
+
   return `<div class="movie-modal js-movie-modal">
   <div class="movie-modal__container animate-modal">
   <button class="movie-modal__close" id="close-movie-modal"></button>
@@ -31,8 +32,9 @@ const MovieDetailsCard = ({
       <div class="movie-modal__top-block">
         <div class="movie-modal__image-wrapper">
         <div class="movie-modal__image-box-shadov">
-          <img src=${poster_path !== null ? poster_path : noPosterImg}
-          alt=${title}$ class="movie-modal__image">
+         <img src=${
+           pokemon.sprites.other.dream_world.front_default
+         }  alt=${title}$ class="movie-modal__image">
           </div>
 
           <div class="movie-modal__btn-wrapper">            

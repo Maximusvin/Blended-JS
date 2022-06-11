@@ -8,20 +8,21 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 10;
-  overflow: auto;
+  background-color: rgba(105, 105, 105, 0.3);
+  z-index: 1000;
+  overflow: hidden;
   transition: all 0.1s linear;
   pointer-events: none;
-  opacity: 0;
-  color: #ffffff;
+  opacity: 1;
+  color: #000;
 
   &__container {
     position: relative;
     max-width: 90%;
-    height: 95%;
+    height: 85%;
     padding: 30px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
+    background-color: #fff;
     border-radius: 15px;
 
     @include for-size(mini-mobile) {
@@ -43,30 +44,24 @@
     top: 15px;
     right: 10px;
     background-color: transparent;
+    border-radius: 10px;
     outline: none;
-    border: none;
-    color: #fff;
+    border: 1px solid #606060;
+    color: rgb(0, 0, 0);
     z-index: 1;
     width: 48px;
     height: 48px;
-    background-image: url('../images/svg/icon-close.svg');
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: transform 0.3s linear;
-
-    &:hover {
-      transform: rotateZ(180deg);
-    }
   }
 
   &__content {
     background: transparent;
     position: relative;
     overflow: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
     height: 100%;
 
     &::-webkit-scrollbar {
@@ -162,39 +157,6 @@
   &__image {
     position: relative;
     z-index: 2;
-  }
-
-  &__vote-block {
-    display: flex;
-    margin-bottom: 25px;
-
-    @include for-size(mini-mobile) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__vote-text {
-    display: inline-block;
-    margin-right: 20px;
-    color: #20bec6;
-    width: 140px;
-
-    @include for-size(mini-mobile) {
-      width: auto;
-      margin-right: 0;
-      margin-bottom: 5px;
-    }
-  }
-
-  &__vote-block-text {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 2px 15px;
-    background: white;
-    border-radius: 20px;
-    color: #000000;
   }
 
   &__overview {
