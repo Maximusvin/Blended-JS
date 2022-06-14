@@ -6,12 +6,6 @@ import './scss/main.scss';
 
 const pokemonApi = new APIService();
 
-function getAllPokemon({ results }) {
-  results.forEach(pokemon =>
-    pokemonApi.getPokemon(pokemon.name).then(pokemonMarkup),
-  );
-}
-
 function pokemonMarkup(pokemon) {
   const data = `<li class="pokemon-card" data-pokemon=${pokemon.name}>    
         <h2 data-pokemon=${pokemon.name}>${pokemon.name}</h2>
@@ -21,7 +15,13 @@ function pokemonMarkup(pokemon) {
   refs.pokemonList.insertAdjacentHTML('beforeend', data);
 }
 
-pokemonApi.getAllPokemon().then(getAllPokemon);
+pokemonApi
+  .getAllPokemon()
+  .then(data =>
+    data.results.forEach(pokemon =>
+      pokemonApi.getPokemon(pokemon.name).then(pokemonMarkup),
+    ),
+  );
 
 refs.pokemonList.addEventListener('click', openDetailsPokemon);
 
