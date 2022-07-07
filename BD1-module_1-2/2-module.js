@@ -10,6 +10,15 @@
 //                              Array
 // -----------------------------------------------------------------
 
+// const length = arr.push(6);
+// const length1 = arr.push(7);
+
+// console.log(length1);
+
+// console.log(NaN === NaN);
+// console.log(typeof null);
+// console.log(Number(undefined));
+
 // const arr = [1, 2, 3, 4, 5];
 // arr[4] = 555;
 // console.log(arr);
@@ -85,7 +94,7 @@
 // -----------------------------------------------------------------
 // Замыкание
 // const foo = (a) => (b) => (c) => a + b + c;
-// console.log(foo(1)(1)(1));
+// console.log(foo(1)(2)(3));
 
 //--------------------
 // const foo = (a) => (b) => a + b;
@@ -137,6 +146,22 @@
 // }
 
 // func();
+
+// -----------------------------------------------------------------
+// console.log(typeof null === "object");
+// console.log(null instanceof Object);
+
+// const a = null;
+// a.value = 10;
+// console.log(a.value);
+
+// console.log(typeof [] === "object");
+// console.log(typeof NaN === "number");
+// console.log(NaN === NaN);
+
+// const func = () => {};
+// console.log(typeof func);
+// console.log(func instanceof Object);
 
 // ================================================================================
 //

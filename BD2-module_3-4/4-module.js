@@ -31,7 +31,7 @@
 // console.log(find(2)); // {id: 2, name: "Pete"}
 
 // // ----------------------------------------------------------------
-// // 2. Виведи в консоль стрічку слідуючого типу: "Имя - позиция в массиве Х и сам массив"
+// // 2. Виведи в консоль стрічку для кожного єлемента масива слідуючого типу: "Имя - позиция в массиве Х и сам массив"
 //
 // const robots = ["Bender", "Awesom-O", "Johnny 5"];
 
@@ -55,8 +55,8 @@
 //   { name: "Tatiana", score: 30 },
 // ];
 
-// console.log(usersSortedByScoreDesc(users)); // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
-// console.log(usersSortedByScoreAsc(users)); // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
+// console.log(usersSortedByScoreAsc(users));   // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
+// console.log(usersSortedByScoreDesc(users));  // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
 
 // // //----------------------------------------------------------------
 
