@@ -4,142 +4,184 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../css/general-style.css" />
     <title>HW 1</title>
   </head>
   <body>
-    <p><a href="../../index.html">Go back to maim page</a></p>
+    <div class="container">
+      <ul class="navigation">
+        <li>
+          <a href="../modules/module-1.html" class="general-button">
+            Blended 1
+          </a>
+        </li>
+        <li>
+          <a href="../modules/module-2.html" class="general-button">
+            Blended 2
+          </a>
+        </li>
+        <li>
+          <a href="../modules/module-3.html" class="general-button">
+            Blended 3
+          </a>
+        </li>
+        <li>
+          <a href="../modules/module-4.html" class="general-button">
+            Blended 4
+          </a>
+        </li>
+        <li>
+          <a href="../modules/module-5.html" class="general-button">
+            Blended 5
+          </a>
+        </li>
+        <li>
+          <a href="../modules/module-6.html" class="general-button">
+            Blended 6
+          </a>
+        </li>
+        <li>
+          <a href="./hw-1.html" class="general-button"> HW 1 </a>
+        </li>
+        <li>
+          <a href="./hw-2.html" class="general-button"> HW 2 </a>
+        </li>
+        <li>
+          <a href="./hw-3.html" class="general-button"> HW 3 </a>
+        </li>
+      </ul>
 
-    <h2>Home work 3</h2>
+      <h2>Home work 3</h2>
 
-    <div class="main-block">
-      <div class="form">
-        <h3 class="title">Your order</h3>
+      <div class="main-block">
+        <div class="form">
+          <h3 class="title">Your order</h3>
 
-        <div class="order">
-          <form id="form">
-            <div class="input-wrap">
-              <input
-                class="input-size"
-                name="size"
-                id="size"
-                type="text"
-                placeholder="Choose size your hamburger"
-              />
-
-              <input
-                class="amount"
-                name="amount"
-                type="number"
-                placeholder="Amount"
-              />
-
-              <div class="inp-wrap">
-                <button class="btn-input btnAdd" type="button">+</button>
-                <button
-                  class="btn-input btnRemove"
-                  type="button"
-                  class="btnRemove"
-                >
-                  -
-                </button>
+          <div class="order">
+            <form id="form">
+              <div class="input-wrap">
                 <input
-                  name="toppings"
-                  id="toppings"
+                  class="input-size"
+                  name="size"
+                  id="size"
                   type="text"
-                  placeholder="Choose toppings"
+                  placeholder="Choose size your hamburger"
                 />
+
+                <input
+                  class="amount"
+                  name="amount"
+                  type="number"
+                  placeholder="Amount"
+                />
+
+                <div class="inp-wrap">
+                  <button class="btn-input btnAdd" type="button">+</button>
+                  <button
+                    class="btn-input btnRemove"
+                    type="button"
+                    class="btnRemove"
+                  >
+                    -
+                  </button>
+                  <input
+                    name="toppings"
+                    id="toppings"
+                    type="text"
+                    placeholder="Choose toppings"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="btn-wrap">
-              <button type="submit" class="btnOrder">Замовити</button>
-            </div>
-          </form>
-
-          <div class="info-wrap">
-            <div class="info">
-              <p class="size"></p>
-              <p class="topping"></p>
-              <div class="add-topping-wrap">
-                <div class="topping-list"></div>
-                <p class="total-value"></p>
+              <div class="btn-wrap">
+                <button type="submit" class="btnOrder">Замовити</button>
               </div>
+            </form>
+
+            <div class="info-wrap">
+              <div class="info">
+                <p class="size"></p>
+                <p class="topping"></p>
+                <div class="add-topping-wrap">
+                  <div class="topping-list"></div>
+                  <p class="total-value"></p>
+                </div>
+              </div>
+
+              <p class="order"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-wrap">
+          <h3 class="title">Menu</h3>
+
+          <div class="menu">
+            <div class="toppings">
+              <h4 class="title">Toppings</h4>
+              <ul></ul>
             </div>
 
-            <p class="order"></p>
+            <div class="size">
+              <h4 class="title">Size</h4>
+              <ul></ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="menu-wrap">
-        <h3 class="title">Menu</h3>
+      <h3>Condition</h3>
 
-        <div class="menu">
-          <div class="toppings">
-            <h4 class="title">Toppings</h4>
-            <ul></ul>
-          </div>
-
-          <div class="size">
-            <h4 class="title">Size</h4>
-            <ul></ul>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li>Створіть <b>клас Hamburger</b></li>
+        <li>
+          В Класі добавте в статік обєкт налаштувань по добавкам (не по
+          розміру), щоб була можливість використовувати їх як у прикладі:
+          <b>Hamburger.stuffing.STUFFING_SALAD</b>
+        </li>
+        <li>
+          Добавте слідуючі методи:
+          <ul>
+            <li><b>addSize</b> - Добавляє розмір гамбургера</li>
+            <li>
+              <b>addTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> -
+              Добавляє добавку до гамбургера. Можна добавити декілька добавок
+              при умові, що вони валідні
+            </li>
+            <li>
+              <b>removeTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> -
+              Видалити добавку, при умові, що вона раніше була добавлена.
+            </li>
+            <li>
+              <b>getStuffing</b> - геттер, має повернути this.toppings = [....]
+            </li>
+            <li><b>calculatePrice()</b> - взнати вартість замовлення</li>
+            <li><b>calculateCalories()</b> - взнати калорійність гамбургера</li>
+            <li>
+              <b>showError()</b> - метод, який може показувати 2 помилки - якщо
+              передали невірний розмір або начинка не існує (При видалені або
+              додаванні)
+            </li>
+          </ul>
+        </li>
+        <li>
+          Добавте в логіку кода розрахунок варстості замовлення в залежності від
+          розміру гамбургера та добавлених начинок.
+        </li>
+        <li>
+          Дані в формі мають рендеритись динамічно (уявіть, що вони приходять з
+          бекенду, тому кількість начинок може мінятьсь. Відповідно, мають
+          змінюватись поля в формі по даним начинкам)
+        </li>
+        <li>
+          Форма має бути інтерактивною, тобто - при виборі кожного пункту -
+          інформація добавляється в блок "Інфо". Після заповнення усіх полів -
+          сабмітимо форму і отримуємо підтвердження замовлення з виводом
+          загальної інформації: вартість замовлення та що було обрано.
+        </li>
+      </ul>
     </div>
 
-    <h3>Condition</h3>
-
-    <ul>
-      <li>Створіть <b>клас Hamburger</b></li>
-      <li>
-        В Класі добавте в статік обєкт налаштувань по добавкам (не по розміру),
-        щоб була можливість використовувати їх як у прикладі:
-        <b>Hamburger.stuffing.STUFFING_SALAD</b>
-      </li>
-      <li>
-        Добавте слідуючі методи:
-        <ul>
-          <li><b>addSize</b> - Добавляє розмір гамбургера</li>
-          <li>
-            <b>addTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> - Добавляє
-            добавку до гамбургера. Можна добавити декілька добавок при умові, що
-            вони валідні
-          </li>
-          <li>
-            <b>removeTopping(Hamburger.stuffing.STUFFING_SALAD, ...)</b> -
-            Видалити добавку, при умові, що вона раніше була добавлена.
-          </li>
-          <li>
-            <b>getStuffing</b> - геттер, має повернути this.toppings = [....]
-          </li>
-          <li><b>calculatePrice()</b> - взнати вартість замовлення</li>
-          <li><b>calculateCalories()</b> - взнати калорійність гамбургера</li>
-          <li>
-            <b>showError()</b> - метод, який може показувати 2 помилки - якщо
-            передали невірний розмір або начинка не існує (При видалені або
-            додаванні)
-          </li>
-        </ul>
-      </li>
-      <li>
-        Добавте в логіку кода розрахунок варстості замовлення в залежності від
-        розміру гамбургера та добавлених начинок.
-      </li>
-      <li>
-        Дані в формі мають рендеритись динамічно (уявіть, що вони приходять з
-        бекенду, тому кількість начинок може мінятьсь. Відповідно, мають
-        змінюватись поля в формі по даним начинкам)
-      </li>
-      <li>
-        Форма має бути інтерактивною, тобто - при виборі кожного пункту -
-        інформація добавляється в блок "Інфо". Після заповнення усіх полів -
-        сабмітимо форму і отримуємо підтвердження замовлення з виводом загальної
-        інформації: вартість замовлення та що було обрано.
-      </li>
-    </ul>
-
-    <script src="../../BD3-module_5-6/home-work_5-6.js"></script>
+    <script src="../../Blended-3/HW-3.js"></script>
   </body>
 </html>
