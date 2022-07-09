@@ -1,6 +1,7 @@
 // =====================================================================
 //
-//                      MODULE-2: МАСИВИ та ФУНКЦІЇ
+//                               BLENDED-2
+//                       ARRAY, FUNCTION and OBJECT
 //
 // =====================================================================
 
@@ -8,17 +9,13 @@
 // console.log(typeof null);
 // console.log(Number(undefined));
 
-// ---------------------  1   ------------------------
-
-// Что такое чистая функция?
+// ---------------------  1. Що таке чиста функція?   ----------------------
 // let a = 1;
 
 // const foo = (b) => a + b;
 // const foo = (a, b) => a + b;
 
-// ---------------------  2   ------------------------
-// Что такое функция высшего порядка?
-
+// ---------------  2. Що таке функція вищого порядку?   --------------------
 // const foo = (callback) => {
 //   callback();
 // };
@@ -27,7 +24,7 @@
 // const foo = (a) => (b) => (c) => a + b + c;
 // console.log(foo(1)(2)(3));
 
-//--------------------
+// ******************* Example *********************************
 // const makeCounter = () => {
 //   let count = 0;
 //   return () => count++;
@@ -42,8 +39,7 @@
 // console.log(counter2()); // ?
 // console.log(counter2()); // ?
 
-// ---------------------  3. Область видимості   ------------------------
-
+// ---------------------  4. Область видимості   ------------------------
 // var myName = "global";
 
 // function func() {
@@ -54,6 +50,89 @@
 // }
 
 // func();
+
+// ---------------------  5. Створення об'єкта   ------------------------
+// const obj = {};
+// console.log(obj);
+
+// const obj2 = new Object();
+// console.log(obj2);
+
+// const obj3 = Object.create({});
+// console.log(obj3);
+
+// ---------------------  6. Копіювання об'єкту   ------------------------
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = obj;
+// obj2.name = "James Bond";
+
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
+
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = {};
+
+// for (let key in obj) {
+//   obj2[key] = obj[key];
+// }
+
+// obj2.name = "James Bond";
+
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
+
+// const obj = { name: "Andrew", age: 29 };
+// const obj2 = { ...obj, name: "James Bond" };
+
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
+
+// const obj = { name: "Andrew", age: 29, favoriteBrands: ["Nissan", "Apple", "Sony"] };
+// const obj2 = JSON.parse(JSON.stringify(obj));
+// obj2.name = "James Bond";
+
+// console.log(obj.name); // ?
+// console.log(obj2.name); // ?
+
+// const obj = { name: "Andrew", age: 29 };
+// const obj3 = {name: '123'}
+
+// const obj2 = Object.assign(obj3, obj);
+
+// console.log(obj); // ?
+// console.log(obj3); // ?
+
+// ---------------------  6. Проверка свойств Обьекта   ------------------------
+// const person = {
+//   name: "",
+//   age: 29,
+//   hobbies: null,
+// };
+
+// console.log("name" in person);
+
+// person.hobbies = null;
+
+// console.log("name" in person);
+// console.log(person);
+
+// console.log(person.hasOwnProperty("name") && !!person.name);
+
+// ------
+// console.log("toString" in person);
+// console.log(person.__proto__.toString);
+// console.log(person);
+
+// const obj = Object.create(null);
+// obj.name = "Andrew";
+// obj.age = 29;
+
+// console.log("toString" in obj);
+// console.log(obj);
+
+//
+//
+//
 
 //
 //
@@ -122,107 +201,7 @@
 //   return arr;
 // }
 
-// ==================================================
-// ==================================================
-// ==================================================
-
-// =====================================================================
-//
-///                          MODULE-3: OBJECT
-//
-// =====================================================================
-
-// Створення обєкта
-// const obj = {};
-// console.log(obj);
-
-// const obj2 = new Object();
-// console.log(obj2);
-
-// const obj3 = Object.create({});
-// console.log(obj3);
-
-// -----------------------------------------------------------------
-// Копіювання обєкту
-// const obj = { name: "Andrew", age: 29 };
-// const obj2 = obj;
-// obj2.name = "James Bond";
-
-// console.log(obj.name); // ?
-// console.log(obj2.name); // ?
-
-// const obj = { name: "Andrew", age: 29 };
-// const obj2 = {};
-
-// for (let key in obj) {
-//   obj2[key] = obj[key];
-// }
-
-// obj2.name = "James Bond";
-
-// console.log(obj.name); // ?
-// console.log(obj2.name); // ?
-
-// const obj = { name: "Andrew", age: 29 };
-// const obj2 = { ...obj, name: "James Bond" };
-
-// console.log(obj.name); // ?
-// console.log(obj2.name); // ?
-
-// const obj = { name: "Andrew", age: 29, favoriteBrands: ["Nissan", "Apple", "Sony"] };
-// const obj2 = JSON.parse(JSON.stringify(obj));
-// obj2.name = "James Bond";
-
-// console.log(obj.name); // ?
-// console.log(obj2.name); // ?
-
-// const obj = { name: "Andrew", age: 29 };
-// const obj3 = {name: '123'}
-
-// const obj2 = Object.assign(obj3, obj);
-
-// console.log(obj); // ?
-// console.log(obj3); // ?
-
-// -----------------------------------------------------------------
-
-// Проверка свойств Обьекта
-// const person = {
-//   name: "",
-//   age: 29,
-//   hobbies: null,
-// };
-
-// console.log("name" in person);
-
-// person.hobbies = null;
-
-// console.log("name" in person);
-// console.log(person);
-
-// console.log(person.hasOwnProperty("name") && !!person.name);
-
-// ------
-// console.log("toString" in person);
-// console.log(person.__proto__.toString);
-// console.log(person);
-
-// const obj = Object.create(null);
-// obj.name = "Andrew";
-// obj.age = 29;
-
-// console.log("toString" in obj);
-// console.log(obj);
-
-//
-//
-//
-
-// ================================================================================
-//                                  ЗАДАЧІ
-// ================================================================================
-
-// =================================== 1 ==========================================
+// =================================== 7 ==========================================
 // // Напиши скрипт, який для обєкта user, послідовно:
 // // - добавить поле mood зі значеням 'happy'.
 // // - замінить hobby на 'skydiving'.
@@ -241,11 +220,10 @@
 //  console.log(`${key}:${obj[key]}`)
 //}
 
-// ==================================================================================
-
-// 2. У нас есть объект, в котором храняться зарплаты команды.
-// Напишите код для сумирования всех зарплат и сохраните его результат в переменной sum.
-// Если объект salaries пуст, то результат должен быть 0.
+// =================================== 8 ==========================================
+// // У нас есть объект, в котором храняться зарплаты команды.
+// // Напишите код для сумирования всех зарплат и сохраните его результат в переменной sum.
+// // Если объект salaries пуст, то результат должен быть 0.
 
 // const salaries = {
 //   Mango: 100,
@@ -258,11 +236,10 @@
 //  total += value
 //}
 
-// ==================================================================================
-
-// 3. Напишите ф-цию calcTotalPrice(stones, stonesName), которая принимает массив объектов и
-// строку с названием камня. Функция считает и возвращает общую стоимость камней
-// с таким именем, ценой и количеством из объекта
+// =================================== 9 ==========================================
+// // Напишите ф-цию calcTotalPrice(stones, stonesName), которая принимает массив объектов и
+// // строку с названием камня. Функция считает и возвращает общую стоимость камней
+// // с таким именем, ценой и количеством из объекта
 
 // const stones = [
 //   { name: "Изумруд", price: 1300, quantity: 4 },
@@ -280,11 +257,11 @@
 //   }
 // }
 
-// ==================================================================================
-// 4. Создайте объект calculator с тремя методами:
-// - read(a, b) - принимает два аргумента и сохраняет их как свойства объекта.
-// - sum() - возвращает сумму сохраненных значений.
-// - mult() - переумножает сохраненные значения и возвращает результат.
+// =================================== 10 ==========================================
+// // Создайте объект calculator с тремя методами:
+// // - read(a, b) - принимает два аргумента и сохраняет их как свойства объекта.
+// // - sum() - возвращает сумму сохраненных значений.
+// // - mult() - переумножает сохраненные значения и возвращает результат.
 
 // const calculator = {
 //   read(a, b) {},
@@ -304,9 +281,8 @@
 //   mult() {},
 // };
 
-// ==================================================================================
-
-// // 5. Об'єднати два обєкти між собою:
+// =================================== 11 ==========================================
+// // Об'єднати два обєкти між собою:
 //
 // const users = [
 //   { name: "Victor", score: 20 },
