@@ -14,9 +14,9 @@
 
 // ---------------------  2. Приклад з домашки   ----------------------
 function onInputChange(event) {
-  // inputEl.value === ""
-  //   ? (outputEl.textContent = "Anonymous")
-  //   : (outputEl.textContent = event.currentTarget.value);
+  inputEl.value === "";
+  // ? (outputEl.textContent = "Anonymous")
+  // : (outputEl.textContent = event.currentTarget.value);
 }
 
 // ---------------------  3. Звернення до ДОМу в циклах  ----------------------
@@ -28,24 +28,3 @@ function onInputChange(event) {
 
 //   listRef.appendChild(li);
 // }
-
-// ---------------------  4. Mortgage   ----------------------
-
-const banks = [
-  {
-    id: "3453456475htryrtyhgrytrk3jh5geh3k4jhb65mh",
-    name: "Mono",
-    interestRate: 5,
-    maxLoan: 500000,
-    minPayment: 1000,
-    loanTerm: 12,
-  },
-  {
-    id: 2,
-    name: "Privat",
-    interestRate: 7,
-    maxLoan: 1000000,
-    minPayment: 5000,
-    loanTerm: 50,
-  },
-];
