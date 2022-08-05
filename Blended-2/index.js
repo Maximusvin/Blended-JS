@@ -9,12 +9,6 @@
 // console.log(typeof null);
 // console.log(Number(undefined));
 
-// ---------------------  1. Що таке чиста функція?   ----------------------
-// let a = 1;
-
-// const foo = (b) => a + b;
-// const foo = (a, b) => a + b;
-
 // ---------------  2. Що таке функція вищого порядку?   --------------------
 // const foo = (callback) => {
 //   callback();
@@ -185,8 +179,6 @@
 
 // ************ Solution ************
 // function getCapitals(string) {
-//   // write code here
-
 //   const arr = [];
 
 //   Array.from(string.trim()).forEach((letter) => {
