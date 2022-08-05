@@ -1,4 +1,5 @@
-`<ul class="pokemon__container">
+```
+<ul class="pokemon__container">
 
 <li class="pokemon-card">
 
@@ -6,10 +7,9 @@
   <img src="url" alt=""  />
 </li>
 </ul>
-`
+```
 
-`
-
+```
 <div class="backdrop" id="modal-backdrop">
         <div class="modal">
           <button class="modal__button-close">Х</button>
@@ -58,4 +58,4 @@
           <button class="modal-btn" type="button">Add to your favorite!</button>
         </div>
       </div>
- `
+```
