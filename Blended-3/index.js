@@ -37,7 +37,7 @@
 // positiveSum([0, -3, 5, 7]); // 12
 
 // =================================== 4 ==========================================
-// // Відсортуй обєкти по збільшеню та зменшеню score
+// // Напиши функції, які сортують обєкти по збільшеню та зменшеню score
 //
 // const users = [
 //   { name: "Victor", score: 20 },
@@ -45,15 +45,15 @@
 //   { name: "Tatiana", score: 30 },
 // ];
 
-// console.log(usersSortedByScoreAsc(users));   // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
-// console.log(usersSortedByScoreDesc(users));  // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
+// console.log(usersSortedByScoreAsc(users));  // [{name: "Mario", score: 10}, {name: "Victor", score: 20}, {name: "Tatiana", score: 30}]
+// console.log(usersSortedByScoreDesc(users));   // [{name: "Tatiana", score: 30}, {name: "Victor", score: 20}, {name: "Mario", score: 10}]
 
 // =================================== 5 ==========================================
 // // Напиши ф-цію, яка фільтрує масив та повертає елементи, окрім того, що був переданий в дану функцію в якості аргумента.
 //
 // const animals = ["pigs", "goats", "sheep"];
 //
-// foo("pigs"); // ["goats", "sheep"]
+// console.log(foo("pigs")); // ["goats", "sheep"]
 
 // =================================== 6 ==========================================
 // // Створи функції, які:
@@ -67,9 +67,9 @@
 //   { name: "Tatiana", score: 30 },
 // ];
 
-// foo1(); // { name: "Tatiana", score: 30 }
-// foo2(); // [20, 10, 30]
-// foo3(); // 60
+// console.log(foo1()); // { name: "Tatiana", score: 30 }
+// console.log(foo2()); // [20, 10, 30]
+// console.log(foo3()); // 60
 
 // =================================== 7 ==========================================
 // // Напишите две функции:
