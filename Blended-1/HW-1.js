@@ -6,16 +6,16 @@
 // Вказуємо країну через prompt  і купляємо тур.
 // Виводимо повідомлення, що тур оплачений і залишок на рахунку користувача.
 
-// const countries = [
-//   "Ukraine",
-//   "Poland",
-//   "Croatia",
-//   "Montenegro",
-//   "France",
-//   "USA",
-// ];
+const countries = [
+  "Ukraine",
+  "Poland",
+  "Croatia",
+  "Montenegro",
+  "France",
+  "USA",
+];
 
-// const countriesPrice = [100, 200, 300, 400, 500, 600];
+const countriesPrice = [100, 200, 300, 400, 500, 600];
 
 // let userName;
 // let userPass;

@@ -1,15 +1,10 @@
 // "use strict";
 
-const formRef = document.querySelector("#form");
-
 // =====================================================================
 //
 //        BLENDED-1: ЗМІННІ та ТИПИ ДАНИХ. ВІДГАЛУЖЕННЯ та ЦИКЛИ
 //
 // =====================================================================
-
-console.dir(formRef.elements.Blended.value);
-// console.log("453");
 
 // ---------------------  0. Питання   ------------------------
 
@@ -153,3 +148,11 @@ console.dir(formRef.elements.Blended.value);
 //     alert(`Общая сумма чисел равна${total}`);
 //   }
 // } while (chech);
+
+// console.log(a);
+
+// {
+//   var a = 5;
+// }
+
+console.log(a);
