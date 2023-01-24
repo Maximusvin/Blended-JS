@@ -33,8 +33,8 @@
 
 // const positiveSum = (arr) => {};
 
-// positiveSum([2, 4, 6, 8]); // 20
-// positiveSum([0, -3, 5, 7]); // 12
+// console.log(positiveSum([2, 4, 6, 8])); // 20
+// console.log(positiveSum([0, -3, 5, 7])); // 12
 
 // =================================== 4 ==========================================
 // // Напиши функції, які сортують обєкти по збільшеню та зменшеню score
@@ -65,11 +65,12 @@
 //   { name: "Victor", score: 20 },
 //   { name: "Mario", score: 10 },
 //   { name: "Tatiana", score: 30 },
+//   { name: "Max", score: 15 },
 // ];
 
-// console.log(foo1()); // { name: "Tatiana", score: 30 }
-// console.log(foo2()); // [20, 10, 30]
-// console.log(foo3()); // 60
+// console.log(foo1(users)); // { name: "Tatiana", score: 30 }
+// console.log(foo2(users)); // [20, 10, 30, 15]
+// console.log(foo3(users)); // 75
 
 // =================================== 7 ==========================================
 // // Напишите две функции:
@@ -205,7 +206,7 @@
 
 // // Напиши ф-цію letterCount, яка приймає два аргументи: слово та літеру
 //  // і рахує скільки разів дана літера зустрічається у слові.
-// // Якщо перший аргумент пуста строка - повератє 0ю
+// // Якщо перший аргумент пуста строка - повератє 0.
 
 // const letterCount = (word, letter) => {};
 
@@ -281,31 +282,31 @@
 
 //++++++++++++++++++++++++++++++++++++++++++
 
-const User = function (userObj) {
-  const { userName, age, numbersOfPost } = userObj;
+// const User = function (userObj) {
+//   const { userName, age, numbersOfPost } = userObj;
 
-  console.log("🐱‍👤👀: User -> typeof this", typeof this);
-  this.username = userName;
-  this.age = age;
-  this.numbersOfPost = numbersOfPost;
+//   console.log("🐱‍👤👀: User -> typeof this", typeof this);
+//   this.username = userName;
+//   this.age = age;
+//   this.numbersOfPost = numbersOfPost;
 
-  //   this.getInfo = function () {
-  //     console.log(
-  //       `Пользователю ${this.username} ${this.age} лет и у него ${this.numbersOfPost} публикаций.`
-  //     );
-  //   };
-};
+//   //   this.getInfo = function () {
+//   //     console.log(
+//   //       `Пользователю ${this.username} ${this.age} лет и у него ${this.numbersOfPost} публикаций.`
+//   //     );
+//   //   };
+// };
 
-User.prototype.getInfo = function () {
-  console.log(
-    `Пользователю ${this.username} ${this.age} лет и у него ${this.numbersOfPost} публикаций.`
-  );
-};
+// User.prototype.getInfo = function () {
+//   console.log(
+//     `Пользователю ${this.username} ${this.age} лет и у него ${this.numbersOfPost} публикаций.`
+//   );
+// };
 
-const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
+// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
 
-console.log(polly);
-polly.getInfo();
+// console.log(polly);
+// polly.getInfo();
 
 // =============================================================================
 
